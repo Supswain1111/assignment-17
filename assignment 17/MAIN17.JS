@@ -2,14 +2,23 @@ function SaveToLocalStorage(event){
     event.preventDefault();
     const name = event.target.name.value;
     const email=event.target.email.value;
-    const phone=event.target.phone.value;
+    const phone=event.target.PHONE.value;
     
     const obj ={
         name,
         email,
         phone
     }
-    localStorage.setItem(obj.email,JSON.stringify(obj));
+
+    axios.post("https://crudcrud.com/api/71c293c1352043e9be298ab0a8d73117/resource",obj)
+    .then((data)=> {
+        console.log(data);
+    })
+        .catch((err) =>{
+            console.log(err);
+        })
+
+   // localStorage.setItem(obj.email,JSON.stringify(obj));
     ShowOnScreen(obj);
 }
 function ShowOnScreen (obj){
