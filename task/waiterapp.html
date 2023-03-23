@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order App</title>
+</head>
+<body>
+    <form onclick="saveData(event)">
+                <label for="price"> Choose Price:</label>
+                <input type="text" placeholder="Type price" id="price" name="price">
+                <label for ="dish">Choose Dish:</label> 
+                <input type="text" id="dish" placeholder="Type Dish" name="dish">
+                <label >Choose a Table:</label>
+                <select name="Choose a Table" id="category" name="category">
+                    <option value="Table 1">Table 1</option>
+                    <option value="Table 2">Table 2</option>
+                    <option value="Table 3">Table3</option>
+                    </select>
+                
+                <button>Add to Bill</button>
+    </form>
+    <ul id="Items">
+        <li class="orders"><h2>Orders</h2></li>
+        <li class="orders1"><h3>Table 1</h3></li>
+        <li class="orders2"><h3>Table 2</h3></li>
+        <li class="orders3"><h3>Table 3</h3></li>
+    </ul>
+
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+    <script src="waiterapp.js"></script>
+</body>
+</html>

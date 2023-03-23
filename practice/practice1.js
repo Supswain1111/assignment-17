@@ -2,7 +2,6 @@ const posts =[
     {title: 'happy one',body: 'this way',createdAt:new Date().getTime()},
     {title: 'happy two',body: 'this way get it',createdAt:new Date().getTime()}
 ];
-
 let intervalId=0;
 function getPost(){
         clearInterval(intervalId);
@@ -16,33 +15,8 @@ function getPost(){
         },1000)
         
 }
-
-function createPost(post,callback) {
-    
-    setTimeout(() => {
-        posts.push({...post,createdAt:new Date().getTime()});
-            callback();
-    },2000);
-};
-function create4thPost(post,callback) {
-    
-    setTimeout(() => {
-        posts.push({...post,createdAt:new Date().getTime()});
-            callback();
-},3000);
-};
-
-getPost();
-createPost({title:'post 3',body:'hi'},getPost);
-create4thPost({title:'post 4',body:'hi 4'},getPost);
-
-var timer;
-var count= 0;
-function lastEditedTime(){
-    count=0;
-    clearInterval(timer)
-    setInterval(()=>{
-        count++;
-        console.log(count);
-    },3000);
+createPost(){
+    return new Promise((resolve,reject)=>{
+        
+    })
 }

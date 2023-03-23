@@ -7,7 +7,7 @@
       <title> Appointment Form </title>
     </head>
     <body>
-            <form>
+            <form onsubmit="saveToStorage(event)">
                 <label for="Name"> NAME:</label>
                 <input type="text" id="name" name="name">
                 <label for ="email">EMAIL:</label> </label>
@@ -20,8 +20,7 @@
             <ul id="Items"></ul>
             <script src ="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
  
-        <script src="MAIN17.JS">
-             
-        </script>
+            <script src="task.js"></script>
+
     </body>
     <html>
